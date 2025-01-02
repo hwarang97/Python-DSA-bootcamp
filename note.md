@@ -21,3 +21,22 @@ To allow scripts like conda-hook.ps1 to run, you can change the execution policy
 ```Powershell
 Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 ```
+
+## Why is python list comprehension needed?
+1. Code Simplification
+2. Code Readability (list comprehension is used when list creation)
+3. Easy to add condition
+4. Performance Optimization
+
+### list creation using for loop
+```python
+lst = []
+for i in range(10):
+    if i % 2 == 0:
+        lst.append(i)
+```
+
+### list comprehension
+```python
+lst = [i for i in ragne(10) if i % 2 == 0]
+```
